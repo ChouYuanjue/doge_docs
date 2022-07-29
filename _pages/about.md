@@ -23,7 +23,7 @@ redirect_from:
 # 简介
 豆子 Doge依托于mirai框架， 采用协议为ANDROID_PHONE以及ANDROID_WATCH。
 
-功能主要分成两大部分，依托于mirai-console (JVM)的新功能以及依托于mirai-naive的由旧版移植的旧功能。目前二者数量基本持平。
+功能主要分成两大部分，依托于mirai-console (JVM)的新功能以及依托于mirai-native的由旧版移植的旧功能。目前二者数量基本持平。
 
 初版豆子诞生于2020年3月30日，依托于CQP. 此后四个月内断断续续地进行更新，在此过程中作者收到了许多人善意的帮助和支持，顶峰时期豆子有百余名好友，加入30多个群聊。2020年8月2日，经历腾讯第二次qbot大屠杀，元气大伤，CQP框架倒闭。随后尝试转移至mirai，效果极不理想，作者当即删库跑路，初版豆子就此结束了短暂的一生。
 
@@ -41,7 +41,7 @@ mirai主仓库：[mamoe/mirai](https://github.com/mamoe/mirai)
 
 # 开发者
 
-欢迎参与豆子的开发。请阅读mirai的开发文档：[mirai docs](https://docs.mirai.mamoe.net/). 豆子鼓励使用JVM或者mirai-api-http开发的功能，但不太建议使用mirai-naive. 目前豆子之所以采用双协议就是为了防止mirai-naive崩溃而导致整个bot的停运。
+欢迎参与豆子的开发。请阅读mirai的开发文档：[mirai docs](https://docs.mirai.mamoe.net/). 豆子鼓励使用JVM或者mirai-api-http开发的功能，但不太建议使用mirai-native. 目前豆子之所以采用双协议就是为了防止mirai-native崩溃而导致整个bot的停运。
 
 豆子的所有指令原则上都使用`/`开头，后面应该跟着功能的英文或缩写，如果有开发意愿请注意这点。
 
