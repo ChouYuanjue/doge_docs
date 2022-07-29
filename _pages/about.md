@@ -30,15 +30,15 @@ redirect_from:
 
 友情链接：
 
-mirai主仓库：https://github.com/mamoe/mirai
+mirai主仓库：[mamoe/mirai](https://github.com/mamoe/mirai)
 
-丽琪使用说明：http://liqisese.top:800/help/
+丽琪使用说明：[使用说明](http://liqisese.top:800/help/)
 
 
 
 # 开发者
 
-欢迎参与豆子的开发。请阅读mirai的开发文档：https://docs.mirai.mamoe.net/ 豆子鼓励使用JVM或者mirai-api-http开发的功能，但不太建议使用mirai-naive. 目前豆子之所以采用双协议就是为了防止mirai-naive崩溃而导致整个bot的停运。
+欢迎参与豆子的开发。请阅读mirai的开发文档：[mirai docs](https://docs.mirai.mamoe.net/). 豆子鼓励使用JVM或者mirai-api-http开发的功能，但不太建议使用mirai-naive. 目前豆子之所以采用双协议就是为了防止mirai-naive崩溃而导致整个bot的停运。
 
 豆子的所有指令原则上都使用`/`开头，后面应该跟着功能的英文或缩写，如果有开发意愿请注意这点。
 
@@ -485,15 +485,15 @@ yoasobi ( 群青 )
 # FAQ
 **1.什么是位运算？**
 
-位运算就是直接对整数在内存中的二进制位进行操作的运算。参见https://www.runoob.com/w3cnote/bit-operation.html
+位运算就是直接对整数在内存中的二进制位进行操作的运算。参见[位运算](https://www.runoob.com/w3cnote/bit-operation.html)
 
 **2.什么是Jeff笑话？**
 
-Jeff Dean是谷歌的工程师，大神级别。Jeff笑话是以事实为依据（bushi）来表明Jeff非凡的能力的笑话。参见https://github.com/LRitzdorf/TheJeffDeanFacts
+Jeff Dean是谷歌的工程师，大神级别。Jeff笑话是以事实为依据（bushi）来表明Jeff非凡的能力的笑话。参见[JeffDeanFacts](https://github.com/LRitzdorf/TheJeffDeanFacts)
 
 **3.什么是StyleGAN？**
 
-StyleGAN是NVIDIA继ProGAN之后提出的新的生成对抗网络，借鉴风格迁移，通过修改不同层级在不影响其他层级的前提下控制视觉特征。参见https://github.com/NVlabs/stylegan
+StyleGAN是NVIDIA继ProGAN之后提出的新的生成对抗网络，借鉴风格迁移，通过修改不同层级在不影响其他层级的前提下控制视觉特征。参见[NVlabs/StyleGAN](https://github.com/NVlabs/stylegan)
 
 **4.什么是幻影坦克？**
 
