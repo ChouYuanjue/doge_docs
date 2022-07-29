@@ -1,22 +1,16 @@
 # main links links
 main:
-  - title: "About Me"
-    url: "/#about-me"
+  - title: "开发者"
+    url: "/#开发者"
 
-  - title: "News"
-    url: "/#-news"
+  - title: "加群/加好友"
+    url: "/#加群加好友"
 
-  - title: "Publications"
-    url: "/#-publications"
+  - title: "聊天"
+    url: "/#聊天"
 
-  - title: "Honors and Awards"
-    url: "/#-honors-and-awards"
+  - title: "功能"
+    url: "/#运行代码-run"
 
-  - title: "Educations"
-    url: "/#-educations"
-
-  - title: "Invited Talks"
-    url: "/#-invited-talks"
-
-  - title: "Internships"
-    url: "/#-internships"
+  - title: "FAQ"
+    url: "/#FAQ"
