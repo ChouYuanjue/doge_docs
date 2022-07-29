@@ -1,16 +1,15 @@
 # main links links
 main:
-  - title: "开发者"
+
+  -title: "简介"
+    url: "/#简介"
+    
+  -title: "开发者"
     url: "/#开发者"
-
-  - title: "加群/加好友"
-    url: "/#加群加好友"
-
-  - title: "聊天"
-    url: "/#聊天"
 
   - title: "功能"
     url: "/#运行代码-run"
+
 
   - title: "FAQ"
     url: "/#FAQ"
