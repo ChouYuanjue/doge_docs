@@ -17,10 +17,13 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 请持续关注本档，一切指令以文档为准。
-现在使用的QQ号：2701384861
+
+现在使用的QQ号：**2701384861**
 
 # 简介
-豆子 Doge依托于mirai框架， 采用协议为ANDROID_PHONE以及ANDROID_WATCH。功能主要分成两大部分，依托于mirai-console (JVM)的新功能以及依托于mirai-naive的由旧版移植的旧功能。目前二者数量基本持平。
+豆子 Doge依托于mirai框架， 采用协议为ANDROID_PHONE以及ANDROID_WATCH。
+
+功能主要分成两大部分，依托于mirai-console (JVM)的新功能以及依托于mirai-naive的由旧版移植的旧功能。目前二者数量基本持平。
 
 初版豆子诞生于2020年3月30日，依托于CQP. 此后四个月内断断续续地进行更新，在此过程中作者收到了许多人善意的帮助和支持，顶峰时期豆子有百余名好友，加入30多个群聊。2020年8月2日，经历腾讯第二次qbot大屠杀，元气大伤，CQP框架倒闭。随后尝试转移至mirai，效果极不理想，作者当即删库跑路，初版豆子就此结束了短暂的一生。
 
@@ -302,10 +305,15 @@ yoasobi ( 群青 )
 /math calc <表达式>
 ```
 支持四则运算：加 +   减 -   乘 * ×   除 / ÷   括号 ()
+
 支持其他数值运算：  求余 %   求整 \   求次方 ^   如：4%3=1  4\3=1 4^3=64
+
 支持分布运算：符号,  如：4+3,×5,-7 相当于 ((4+3)×5)-7
+
 支持四舍五入：符号@  x@y  表示：将x四舍五入到相对于个位的第y位。
+
       y大于0，舍入到小数点后y位；y=0，舍入到整数；y小于0，舍入到小数点前|y|位(需要带上括号)。
+
 支持位运算：  左位移 <<   右位移 >>   位或 or   位与 and   位异或 xor
 例子：
 ```
@@ -317,6 +325,7 @@ yoasobi ( 群青 )
 /math mw <词条>
 ```
 词条为英文，省略空格和`'`号，除介词和连词外开头大写（请严格按照要求，否则将无法查询到结果）如：Dyck's Theorem -> DycksTheorem, Lie algebra ->LieAlgebra, probability and statistics -> ProbabilityandStatistics
+
 如果不知道是否词条存在可以通过以下命令查询：
 ```
 /web https://mathworld.wolfram.com/search/?query=<词条>
