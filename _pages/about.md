@@ -38,6 +38,10 @@ mirai主仓库：[mamoe/mirai](https://github.com/mamoe/mirai)
 丽琪使用说明：[使用说明](http://liqisese.top:800/help/)
 
 # 更新日志
+2022-07-31 由于封号影响，大部分功能失效，bot停运。感谢陪伴
+
+2022-07-30 第三次大崩溃事件（tx封号）
+
 2022-07-30 增加`/poem`功能块，增加`/ask`功能，重写`/run`功能块（但仍然不能用）
 
 2022-07-29 第二次大崩溃事件（tx风控）
@@ -130,7 +134,7 @@ A_{m,n} = \begin{pmatrix} a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\ a_{2,1} & a_{2
 /tex urender
 %5Cxymatrix%7B%0A%20%20A%20%5Car%5Br%5D%5Ef%20%5Car%5Bd%5D_g%20&%0A%20%20B%20%5Car%5Bd%5D%5E%7Bg'%7D%20%5C%5C%0A%20%20D%20%5Car%5Br%5D_%7Bf'%7D%20&%0A%20%20C%0A%7D
 ```
-**注意**：对空格符的编码请编成%0A，不要编成+号。可使用该网站上的工具：https://www.matools.com/code-convert
+**注意**：对空格符的编码请编成%20，不要编成+号。可使用该网站上的工具：https://www.matools.com/code-convert
 
 *随机TeX公式图片*
 ```
