@@ -239,7 +239,7 @@ shiwu（食物）
 # Perchance外部API 『/perc』
 这是一次通过glitch实现JS交互的尝试。服务器上装不上JS所以只能这么做试试。当然功能本身和这些没有半点关系。Perchance是一个文本生成器网站，但没有提供api，作者通过glitch搭建了一个供调用。
 
-Perchance网站：![Generators](https://perchance.org/generators) 可以在这里找你想要玩的生成器。
+Perchance网站：[Generators](https://perchance.org/generators) 可以在这里找你想要玩的生成器。
 
 使用说明：
 ```
