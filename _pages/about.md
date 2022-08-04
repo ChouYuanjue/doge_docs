@@ -38,6 +38,8 @@ mirai主仓库：[mamoe/mirai](https://github.com/mamoe/mirai)
 丽琪使用说明：[使用说明](http://liqisese.top:800/help/)
 
 # 更新日志
+2022-08-04 增加`/chem`和`/perc`功能块，增加`/math system`功能
+
 2022-08-03 增加`/insult`和`/fru`功能块
 
 2022-08-02 bot转移至二号机，供私人使用。恢复全部功能
@@ -192,6 +194,81 @@ shiwu（食物）
 *引用马丁路德的句子*
 ```
 /insult lu
+```
+
+# 化学物质查询 『/chem』
+这是为了平衡学术功能中只有数学而产生的功能块。作者不是学化学的因此并没有各大化学站点的通行证，很难写更复杂的功能。
+
+使用说明：
+
+*渲染结构式图片*
+```
+/chem img <结构简式|名称|SMILES>
+```
+这个结构简式比较考究，一般不能直接把高中学的写法按上去。比如查询乙烯得用H2C=CH2而不是CH2=CH2。具体规则自己摸索。所以这边建议用SMILES来表达结构或者直接查名字(必须是英文)。
+
+例子：(桥苯环萘)
+```
+/chem img c1ccc(C2C3c4cc5ccccc5cc4C2c2cc4ccccc4cc23)cc1
+```
+
+*查询SMILES*
+```
+/chem smiles <结构简式|名称>
+```
+规则同上。如果返回404就是数据库里没有。
+
+*查询名称及相关信息*
+```
+/chem names <结构简式|名称|SMILES>
+```
+规则同上。
+
+*查询InChIKey*
+```
+/chem ick <结构简式|名称|SMILES>
+```
+如果你不知道InChIKey是什么那你也没必要用它，别问我。
+
+*查询分子式*
+```
+/chem formula <结构简式|名称|SMILES>
+```
+存在意义不明（雾
+
+# Perchance外部API 『/perc』
+这是一次通过glitch实现JS交互的尝试。服务器上装不上JS所以只能这么做试试。当然功能本身和这些没有半点关系。Perchance是一个文本生成器网站，但没有提供api，作者通过glitch搭建了一个供调用。
+
+Perchance网站：![Generators](https://perchance.org/generators) 可以在这里找你想要玩的生成器。
+
+使用说明：
+```
+/perc <generatorID> [list]
+```
+第一次使用某生成器会反应较慢。其中generatorID是在生成器网址中`https://perchance.org/`之后的部分，比如`https://perchance.org/booknamer`的ID就是`booknamer`。list变量可有可无，默认是output，有哪些list请浏览你用的生成器的源代码。
+当然你也可以直接使用以下提供的例子：
+
+例子：
+
+*生成诗歌*
+```
+/perc poemoracle
+```
+*生成莫名其妙的计算题*
+```
+/perc mathy
+```
+*文摘集*
+```
+/perc bja27rbxpg
+```
+*生成动物句子*
+```
+/perc animal-sentence
+```
+*生成架空历史*
+```
+/perc gen-history year
 ```
 
 # 假俄语转换 『/fru』
@@ -455,6 +532,17 @@ y大于0，舍入到小数点后y位；y=0，舍入到整数；y小于0，舍入
 例子：
 ```
 /math pi 0 100
+```
+
+*进制转换*
+```
+/math system <原数字> <原进制> <转化成的进制>
+```
+支持的进制：2，4，8，10，16，32，64
+
+例子：
+```
+/math system 114514 10 2
 ```
 
 # Pixiv功能 『/px』
