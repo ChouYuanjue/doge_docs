@@ -74,6 +74,7 @@ mirai主仓库：[mamoe/mirai](https://github.com/mamoe/mirai)
 
 如果看了以上这些不客气的要求仍然想参与开发，欢迎联系作者询问更多。让我们一起把豆子变得更好
 
+豆子 Doge 项目地址：https://github.com/doge-qbot/doge-repo
 # 什么？你不会用？
 ```
 /docs
