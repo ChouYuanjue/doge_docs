@@ -20,6 +20,8 @@ redirect_from:
 
 现在使用的QQ号：**现在转为二号机，供私人使用**
 
+以下文档中，用`<>`括起来的表示必须变量，`|`表示“或”，用`[]`括起来的表示可选变量。使用时均**不需要**带上这些符号。
+
 # 简介
 豆子 Doge依托于mirai框架， 采用协议为ANDROID_PHONE以及ANDROID_PAD。
 
@@ -38,6 +40,8 @@ mirai主仓库：[mamoe/mirai](https://github.com/mamoe/mirai)
 丽琪使用说明：[使用说明](http://liqisese.top:800/help/)
 
 # 更新日志
+2022-8-11~2022-8-15 增加`/gan person`, `/gan chem`, `/amuse cp`, `/px kw`功能。增加`/yg`, `/gpt`, `/cotool`功能块。重写`/run`功能块。
+
 2022-08-05 增加`/gan furry`和`/gan anime`功能
 
 2022-08-04 增加`/chem`和`/perc`功能块，增加`/math system`功能
@@ -76,7 +80,7 @@ mirai主仓库：[mamoe/mirai](https://github.com/mamoe/mirai)
 
 如果看了以上这些不客气的要求仍然想参与开发，欢迎联系作者询问更多。让我们一起把豆子变得更好
 
-豆子 Doge 项目地址：https://github.com/doge-qbot/doge-repo
+豆子 Doge 项目地址：[doge-qbot/doge-repo](https://github.com/doge-qbot/doge-repo)
 # 什么？你不会用？
 ```
 /docs
@@ -94,15 +98,33 @@ mirai主仓库：[mamoe/mirai](https://github.com/mamoe/mirai)
 新版豆子已采用茉莉云api进行智能聊天。
 
 # 运行代码 『/run』
-已通过调用curl重写，但是由于作者不知道curl for Windows竟然这么难用（和Linux完全不是一个感觉），所以现在处于**基本不能用**的状态（只要带空格就不行）。以后会再次重写。
+已再次重写。每天调用总额度100次，如果足够受欢迎再考虑增加额度。如果还需要添加别的语言可以和作者联系。
 
 使用说明：
 ```
 /run <语言> <程序内容>
 ```
+**注意**：语言之后一定要有空格！
+
+目前可以使用的语言：
+```
+/run c
+/run cpp
+/run c#
+/run py2
+/run py3
+/run haskell
+/run java
+/run js
+/run kt
+/run lua
+/run php
+/run perl
+/run R
+```
 例子：
 ```
-/run python3 print ('Hello,World!')
+/run py3 print ('Hello, World!')
 ```
 # 科学计算 『/wa』
 此功能使用的是WolframAlpha api，一个月调用额度是2000，如果发现数次发送该指令都无回应很可能是额度已用完。
@@ -177,6 +199,26 @@ dongwu（动物）
 zhiwu（植物）
 
 shiwu（食物）
+```
+
+# 约稿 『/yg』
+AI通过文本生成图片。你可以尝试一些现实中不可能出现的场景，如An octopus fights with a tiger(章鱼和老虎搏斗)。由于训练用的中文数据库不够，**请使用英文**。由于这个功能十分受欢迎，作者将其由单线程改成多线程，但为了防止服务器崩溃，功能在同一个群内仍然需等待上一个任务结束后再进行下一次调用，否则只返回一个`@…`
+
+使用说明：
+```
+/yg <内容>
+```
+
+# GPT-2生成文本 『/gpt』
+GPT-2是由OpenAI研发的强大的语言模型。此功能可通过gpt-2续写文本，如新闻、小说等，可以起到以假乱真的效果。基于和约稿功能同样的原因，**请使用英文**。由于不是很吃内存，写了多线程，可以放心使用。
+
+使用说明：
+```
+/gpt <内容>
+```
+例子：
+```
+/gpt In a shocking finding, scientist from Carnegie Mellon University discovered a herd of zombies living in a remote.
 ```
 
 # 文化人骂街 『/insult』
@@ -411,6 +453,47 @@ yoasobi ( 群青 )
 ```
 调用舔狗日记的接口，内容一定程度上引起不适
 
+*生成cp文*
+```
+/amuse cp <人物1> <人物2>
+```
+
+# 编/解码工具 『/cotool』
+使用说明：
+
+*URL编码/解码*
+```
+/encode url <编码前内容>
+```
+```
+/decode url <编码后内容>
+```
+*Unicode编码/解码*
+```
+/encode usc2 <编码前内容>
+```
+```
+/decode usc2 <编码后内容>
+```
+*Hex编码/解码*
+```
+/encode hex <编码前内容>
+```
+```
+/decode hex <编码后内容>
+```
+*Base64编码*
+```
+/encode base64 <编码前内容>
+```
+*文本加密/解密*
+```
+/encrypt <加密前内容> [密码]
+```
+```
+/decrypt <加密后内容> [密码]
+```
+密码可有可无。
 # 网络工具 『/netool』
 使用说明：
 
@@ -457,6 +540,7 @@ yoasobi ( 群青 )
 ```
 发送指令查看规则
 允许四则运算 `+, -, *, /` 和位运算 `>>`(右移)，`<<`(左移)，`&`(与)，`^`(异或)，`|`(或)
+
 **注意**：这里的`^`不是乘方运算！！！
 
 关于如何计算位运算，可以使用即将提及的功能
@@ -576,13 +660,19 @@ y大于0，舍入到小数点后y位；y=0，舍入到整数；y小于0，舍入
 ```
 /px tsf <图片>
 ```
-旧版豆子最受欢迎的功能。接的是SauceNAO接口。使用限制是一天100次，30内不超过4次，请慎用。
+旧版豆子最受欢迎的功能。接的是SauceNAO接口。使用限制是一天100次，30s内不超过4次，请慎用。
 
 *СЭОТУ功能*
 ```
 /px setu
 ```
 大家喜闻乐见的功能（但是我是不会让你们用der!）。只有授权才可以使用，请与作者联系。
+
+*搜索关键词*
+```
+/px kw <关键词>
+```
+出于未知的原因，搜出来图不少都很瑟。慎用。
 
 # Jeff笑话生成 『/jeffjoke』
 关于什么是Jeff笑话，参加本文档末FAQ.,
@@ -641,6 +731,17 @@ y大于0，舍入到小数点后y位；y=0，舍入到整数；y小于0，舍入
 /gan furry
 ```
 效果还不错
+
+*生成人像*
+```
+/gan person
+```
+由于训练集很大所以效果相当好。
+
+*生成化学物质结构图*
+```
+/gan chem
+```
 # 圣训 『/yan』
 记录群友的言行。无差别记录，如果需要制造某人的圣训录请与作者联系。作者必须也在要求该功能的群内，且需要征得被记录者的同意。
 
@@ -662,7 +763,7 @@ y大于0，舍入到小数点后y位；y=0，舍入到整数；y小于0，舍入
 ```
 使用该命令需要作者授权。
 
-# 其他功能
+# 其他功能 『/other』
 这里是一些零碎的功能，一部分是初版豆子遗留的无法完全恢复的残件。
 
 使用说明：
@@ -741,3 +842,6 @@ StyleGAN是NVIDIA继ProGAN之后提出的新的生成对抗网络，借鉴风格
 
 欢迎赞助打赏。毕竟豆子的大多数问题都是穷的问题（雾）
 ![输入图片说明](../images/MJIF(OK)%5B%5D4V$7U8TQJU%601G.jpg)
+
+**12.什么是GPT-2？**
+一个强大的语言模型。见[OpenAI-Better Language Models](https://openai.com/blog/better-language-models/)
