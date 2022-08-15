@@ -22,6 +22,8 @@ redirect_from:
 
 以下文档中，用`<>`括起来的表示必须变量，`|`表示“或”，用`[]`括起来的表示可选变量。使用时均**不需要**带上这些符号。
 
+功能使用统计（截至8.15 12:00）：
+![](/images/未命名的设计.png)
 # 简介
 豆子 Doge依托于mirai框架， 采用协议为ANDROID_PHONE以及ANDROID_PAD。
 
@@ -844,4 +846,5 @@ StyleGAN是NVIDIA继ProGAN之后提出的新的生成对抗网络，借鉴风格
 ![输入图片说明](../images/MJIF(OK)%5B%5D4V$7U8TQJU%601G.jpg)
 
 **12.什么是GPT-2？**
+
 一个强大的语言模型。见[OpenAI-Better Language Models](https://openai.com/blog/better-language-models/)
