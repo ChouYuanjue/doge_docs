@@ -42,6 +42,8 @@ mirai主仓库：[mamoe/mirai](https://github.com/mamoe/mirai)
 丽琪使用说明：[使用说明](http://liqisese.top:800/help/)
 
 # 更新日志
+2022-08-28 更新了`/genshin`功能块，封印了`/px kw`功能，更新并封印了`/se`功能块
+
 2022-08-28 三号机复活。恢复全部功能
 
 2022-08-18 第七次大崩溃事件（tx封号）。tx怎么还不しね
@@ -432,46 +434,46 @@ yoasobi ( 群青 )
 ```
 **[已封印]** 戳一戳将有30%概率触发该功能。(由于协议更改，戳一戳不再触发）
 
-# 原神抽卡 『/genish』
+# 原神抽卡 『/genshin』
 此功能需要联系作者分群授权。调用此处的api模拟原神抽卡：[GardenHamster/GenshinPray](https://github.com/GardenHamster/GenshinPray)
 
 使用说明：
 
 *查看菜单*
 ```
-/genish menu
+/genshin menu
 ```
 *抽卡功能*
 ```
-/genish 角色单抽[1-10]
+/genshin 角色单抽[1-10]
 ```
 1-10对应不同的卡池，可省略。下同
 ```
-/genish 角色十连[1-10]
+/genshin 角色十连[1-10]
 ```
 ```
-/genish 武器单抽
+/genshin 武器单抽
 ```
 ```
-/genish 武器十连
+/genshin 武器十连
 ```
 ```
-/genish 常驻单抽
+/genshin 常驻单抽
 ```
 ```
-/genish 常驻十连
+/genshin 常驻十连
 ```
 ```
-/genish 全角单抽
+/genshin 全角单抽
 ```
 ```
-/genish 全角十连
+/genshin 全角十连
 ```
 ```
-/genish 全武单抽
+/genshin 全武单抽
 ```
 ```
-/genish 全武十连
+/genshin 全武十连
 ```
 # 零乱的娱乐功能 『/amuse』
 使用说明：
