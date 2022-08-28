@@ -18,7 +18,7 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 请持续关注本文档，一切指令以文档为准。
 
-现在使用的QQ号：**现在转为二号机，供私人使用**
+现在使用的QQ号：**现在转为三号机，供私人使用**
 
 以下文档中，用`<>`括起来的表示必须变量，`|`表示“或”，用`[]`括起来的表示可选变量。使用时均**不需要**带上这些符号。
 
@@ -42,7 +42,9 @@ mirai主仓库：[mamoe/mirai](https://github.com/mamoe/mirai)
 丽琪使用说明：[使用说明](http://liqisese.top:800/help/)
 
 # 更新日志
-2022-08-18 第七次大崩溃事件（三号机永封）。tx怎么还不しね
+2022-08-28 三号机复活。恢复全部功能
+
+2022-08-18 第七次大崩溃事件（tx封号）。tx怎么还不しね
 
 2022-08-18 bot转移到三号机
 
@@ -428,8 +430,49 @@ yoasobi ( 群青 )
 ```
 /rua twist @豆子 Doge
 ```
-戳一戳将有30%概率触发该功能。(由于协议更改，戳一戳不再触发）
+**[已封印]** 戳一戳将有30%概率触发该功能。(由于协议更改，戳一戳不再触发）
 
+# 原神抽卡 『/genish』
+此功能需要联系作者分群授权。调用此处的api模拟原神抽卡：[GardenHamster/GenshinPray](https://github.com/GardenHamster/GenshinPray)
+
+使用说明：
+
+*查看菜单*
+```
+/genish menu
+```
+*抽卡功能*
+```
+/genish 角色单抽[1-10]
+```
+1-10对应不同的卡池，可省略。下同
+```
+/genish 角色十连[1-10]
+```
+```
+/genish 武器单抽
+```
+```
+/genish 武器十连
+```
+```
+/genish 常驻单抽
+```
+```
+/genish 常驻十连
+```
+```
+/genish 全角单抽
+```
+```
+/genish 全角十连
+```
+```
+/genish 全武单抽
+```
+```
+/genish 全武十连
+```
 # 零乱的娱乐功能 『/amuse』
 使用说明：
 
@@ -682,7 +725,7 @@ y大于0，舍入到小数点后y位；y=0，舍入到整数；y小于0，舍入
 ```
 /px kw <关键词>
 ```
-出于未知的原因，搜出来图不少都很瑟。慎用。
+**[已封印]** 出于未知的原因，搜出来图不少都很瑟。慎用。
 
 # Jeff笑话生成 『/jeffjoke』
 关于什么是Jeff笑话，参加本文档末FAQ.,
@@ -773,6 +816,31 @@ y大于0，舍入到小数点后y位；y=0，舍入到整数；y小于0，舍入
 ```
 使用该命令需要作者授权。
 
+# 神秘功能 『/se』
+**[已封印]** 这些功能在诞生之初即被封印，写的目的就是为了挑衅tx。（/se缩写自secret）
+
+使用说明（hex）：
+```
+/se tu
+```
+B4F3BCD2CFB2CEC5C0D6BCFBB5C4C9ACCDBCB9A6C4DC
+```
+/se ph <content>
+```
+506F726E687562B9D8BCFCB4CACBD1CBF7B7FECEF1A3A8CEDED0E8B4FAC0EDA3ACBFC9D6B1BDD3B7C3CECAA3A9
+```
+/se jav <id code>
+```
+B5BAB9FAD3B0CAD3B7ACBAC5B2E9D1AFA3A8BFC9D4DACFDFB2A5B7C5A3A9
+```
+/se aps
+```
+CBE6BBFACDF8D5BEA1A3C0B4D4B4A3BA68747470733A2F2F616C6C706F726E73697465732E6E6574
+```
+/se bt <content>
+```
+4254D6D6D7D3CBD1CBF7
+
 # 其他功能 『/other』
 这里是一些零碎的功能，一部分是初版豆子遗留的无法完全恢复的残件。
 
@@ -859,4 +927,4 @@ StyleGAN是NVIDIA继ProGAN之后提出的新的生成对抗网络，借鉴风格
 
 **13.豆子现在有多少功能？**
 
-共`21`个功能块，`87`个功能，其中不包括bot管理专用功能。
+共`23`个功能块，`103`个功能，其中不包括bot管理专用功能。
