@@ -42,6 +42,8 @@ mirai主仓库：[mamoe/mirai](https://github.com/mamoe/mirai)
 丽琪使用说明：[使用说明](http://liqisese.top:800/help/)
 
 # 更新日志
+2022-08-29 第八次大崩溃事件（tx风控）。暂时解决了问题
+
 2022-08-29 更新了`/siku`功能块
 
 2022-08-28 更新了`/genshin`功能块，封印了`/px kw`功能，更新并封印了`/se`功能块
