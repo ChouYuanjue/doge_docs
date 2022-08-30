@@ -42,6 +42,8 @@ mirai主仓库：[mamoe/mirai](https://github.com/mamoe/mirai)
 丽琪使用说明：[使用说明](http://liqisese.top:800/help/)
 
 # 更新日志
+2022-08-30 更新了`/meme`功能块，添加了`/bing`功能（都很鸡肋）
+
 2022-08-29 第八次大崩溃事件（tx风控）。暂时解决了问题
 
 2022-08-29 更新了`/siku`功能块
@@ -384,7 +386,7 @@ Perchance网站：[Generators](https://perchance.org/generators) 可以在这里
 ```
 原理是把中文转换成拼音后再使用上一条。
 
-# 奇怪的表情包 『/rua』
+# 生成表情 『/rua』
 mirai特色表情生成。一度成为mirai bot最常见的功能（雾
 
 使用说明：
@@ -464,6 +466,31 @@ yoasobi ( 群青 )
 /rua twist @豆子 Doge
 ```
 **[已封印]** 戳一戳将有30%概率触发该功能。(由于协议更改，戳一戳不再触发）
+
+# 表情包 『/meme』
+使用说明：
+```
+/meme mc
+```
+发送可爱的Menhera-chan的表情包
+```
+/meme ch
+```
+小鹦鹉（小黄鸡）表情包
+```
+/meme wh
+```
+小白人表情包
+```
+/meme pg
+```
+企鹅表情包
+```
+/meme fu
+```
+很杂乱的滑稽表情
+
+*另外谁有pusheen猫的表情合集，请速速与豆子联系*
 
 # 原神抽卡 『/genshin』
 此功能需要联系作者分群授权。调用此处的api模拟原神抽卡：[GardenHamster/GenshinPray](https://github.com/GardenHamster/GenshinPray)
@@ -889,6 +916,10 @@ y大于0，舍入到小数点后y位；y=0，舍入到整数；y小于0，舍入
 ```
 原`/img`功能块。之前使用的api.computerfreaker.cf接口现在已全部失效。
 
+*Bing每日壁纸*
+```
+/bing
+```
 *今日说法*
 ```
 /law
