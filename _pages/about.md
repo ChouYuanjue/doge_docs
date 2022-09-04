@@ -42,7 +42,7 @@ mirai主仓库：[mamoe/mirai](https://github.com/mamoe/mirai)
 丽琪使用说明：[使用说明](http://liqisese.top:800/help/)
 
 # 更新日志
-2022-09-04 更新了`/phil`功能块，添加了`/game nc`和`/math oeis`功能
+2022-09-04 更新了`/phil`功能块，添加了`/game nc`和`/math oeis`功能，更新了说明文档系统
 
 2022-08-30 更新了`/meme`功能块，添加了`/bing`功能
 
