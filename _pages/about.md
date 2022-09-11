@@ -22,8 +22,6 @@ redirect_from:
 
 以下文档中，用`<>`括起来的表示必须变量，`|`表示“或”，用`[]`括起来的表示可选变量。使用时均**不需要**带上这些符号。
 
-功能使用统计（截至8.15 12:00）：
-![](/images/未命名的设计.png)
 # 简介
 豆子 Doge依托于mirai框架， 采用协议为ANDROID_PHONE以及ANDROID_PAD。
 
@@ -42,6 +40,8 @@ mirai主仓库：[mamoe/mirai](https://github.com/mamoe/mirai)
 丽琪使用说明：[使用说明](http://liqisese.top:800/help/)
 
 # 更新日志
+2022-09-11 更新了`/dream`, `/style`, `/toonify`功能块，增加了`/pic-url`和`/url-pic`功能
+
 2022-09-04 更新了`/phil`功能块，添加了`/game nc`和`/math oeis`功能，更新了说明文档系统
 
 2022-08-30 更新了`/meme`功能块，添加了`/bing`功能
@@ -269,6 +269,43 @@ GPT-2是由OpenAI研发的强大的语言模型。此功能可通过gpt-2续写�
 ```
 /gpt In a shocking finding, scientist from Carnegie Mellon University discovered a herd of zombies living in a remote.
 ```
+
+# 谷歌深梦 『/dream』
+使用Google的DeepDream算法转化图像。详情见此：[DeepDream|TensorFlow Core](https://tensorflow.google.cn/tutorials/generative/deepdream). 因为训练强度不够所以效果一般。
+
+使用说明：
+```
+/dream <图片>
+```
+空格可有可无
+
+*随机DeepDream图片*
+```
+/dream random
+```
+
+# 风格迁移 『/style』
+使用AI进行风格迁移
+
+使用说明：
+```
+/style pic <图片1> <图片2>
+```
+pic后必须有空格，两张图片之间的空格可有可无。此指令是把后一张图片的风格迁移到前一张上。
+
+```
+/style url <图链1> <图链2>
+```
+针对部分手机发不出文字+两张图的问题。可以通过`/pic-url <图片>`指令获得图链。
+
+# 人物迪士尼化 『/toonify』
+检测图片中人像并转换成迪士尼画风。使用CNN实现
+
+使用说明：
+```
+/toonify <图片>
+```
+空格可有可无
 
 # 文化人骂街 『/insult』
 使用说明：
@@ -952,6 +989,18 @@ y大于0，舍入到小数点后y位；y=0，舍入到整数；y小于0，舍入
 
 使用说明：
 
+*图片转图链*
+```
+/pic-url <图片>
+```
+空格可有可无
+
+*图链转图片*
+```
+/url-pic <图链>
+```
+只有经作者授权才能使用
+
 *发送动漫大图*
 ```
 /anime
@@ -1037,4 +1086,4 @@ StyleGAN是NVIDIA继ProGAN之后提出的新的生成对抗网络，借鉴风格
 
 **13.豆子现在有多少功能？**
 
-共`26`个功能块，`116`个功能，其中不包括bot管理专用功能。
+共`29`个功能块，`123`个功能，其中不包括bot管理专用功能。
