@@ -40,6 +40,8 @@ mirai主仓库：[mamoe/mirai](https://github.com/mamoe/mirai)
 丽琪使用说明：[使用说明](http://liqisese.top:800/help/)
 
 # 更新日志
+2022-09-18 更新了`/gen`和`/chart`功能块，修复了一些小问题
+
 2022-09-11 更新了`/dream`, `/style`, `/toonify`功能块，增加了`/pic-url`和`/url-pic`功能
 
 2022-09-04 更新了`/phil`功能块，添加了`/game nc`和`/math oeis`功能，更新了说明文档系统
@@ -307,6 +309,26 @@ pic后必须有空格，两张图片之间的空格可有可无。此指令是�
 ```
 空格可有可无
 
+# 论文生成 『/gen』
+如果你知道什么是Scigen和Mathgen，你就知道这是什么性质的东西了。
+
+使用说明：
+
+*生成数学论文(Mathgen)*
+```
+/gen math
+```
+
+*生成计科论文(仅摘要)*
+```
+/gen cs
+```
+
+*生成hep-ph论文(仅摘要)*
+```
+/gen hep-ph
+```
+
 # 文化人骂街 『/insult』
 使用说明：
 
@@ -384,6 +406,92 @@ pic后必须有空格，两张图片之间的空格可有可无。此指令是�
 /chem formula <结构简式|名称|SMILES>
 ```
 存在意义不明（雾
+
+# Chart.js生成图表 『/chart』
+使用Chart.js生成图表。
+
+Chart.js v2使用文档：[Charts-2.9.4](https://www.chartjs.org/docs/2.9.4/charts/)
+
+Chart.js v3使用文档：[Charts-latest](https://www.chartjs.org/docs/latest/charts)
+
+使用说明：
+
+*调用Chart.js v2*
+```
+/chart <code>
+```
+例子：
+```
+/chart {
+  type: 'line',
+  data: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [{
+      label: 'First dataset',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [10, 30, 39, 20, 25, 34, -10],
+      fill: false,
+    }, {
+      label: 'Second dataset',
+      fill: false,
+      backgroundColor: 'rgb(54, 162, 235)',
+      borderColor: 'rgb(54, 162, 235)',
+      data: [18, 33, 22, 19, 11, 39, 30],
+    }]
+  },
+  options: {
+    responsive: true,
+    title: {
+      display: true,
+      text: 'Grid Line Settings'
+    },
+    scales: {
+      yAxes: [{
+        gridLines: {
+          drawBorder: false,
+          color: ['pink', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple']
+        },
+        min: 0,
+        max: 100,
+        ticks: {
+          stepSize: 10
+        }
+      }]
+    }
+  }
+}
+```
+![v2-sample](https://quickchart.io/chart?c=%7B%0A%20%20type%3A%20%27line%27%2C%0A%20%20data%3A%20%7B%0A%20%20%20%20labels%3A%20%5B%27January%27%2C%20%27February%27%2C%20%27March%27%2C%20%27April%27%2C%20%27May%27%2C%20%27June%27%2C%20%27July%27%5D%2C%0A%20%20%20%20datasets%3A%20%5B%7B%0A%20%20%20%20%20%20label%3A%20%27First%20dataset%27%2C%0A%20%20%20%20%20%20backgroundColor%3A%20%27rgb(255%2C%2099%2C%20132)%27%2C%0A%20%20%20%20%20%20borderColor%3A%20%27rgb(255%2C%2099%2C%20132)%27%2C%0A%20%20%20%20%20%20data%3A%20%5B10%2C%2030%2C%2039%2C%2020%2C%2025%2C%2034%2C%20-10%5D%2C%0A%20%20%20%20%20%20fill%3A%20false%2C%0A%20%20%20%20%7D%2C%20%7B%0A%20%20%20%20%20%20label%3A%20%27Second%20dataset%27%2C%0A%20%20%20%20%20%20fill%3A%20false%2C%0A%20%20%20%20%20%20backgroundColor%3A%20%27rgb(54%2C%20162%2C%20235)%27%2C%0A%20%20%20%20%20%20borderColor%3A%20%27rgb(54%2C%20162%2C%20235)%27%2C%0A%20%20%20%20%20%20data%3A%20%5B18%2C%2033%2C%2022%2C%2019%2C%2011%2C%2039%2C%2030%5D%2C%0A%20%20%20%20%7D%5D%0A%20%20%7D%2C%0A%20%20options%3A%20%7B%0A%20%20%20%20responsive%3A%20true%2C%0A%20%20%20%20title%3A%20%7B%0A%20%20%20%20%20%20display%3A%20true%2C%0A%20%20%20%20%20%20text%3A%20%27Grid%20Line%20Settings%27%0A%20%20%20%20%7D%2C%0A%20%20%20%20scales%3A%20%7B%0A%20%20%20%20%20%20yAxes%3A%20%5B%7B%0A%20%20%20%20%20%20%20%20gridLines%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20drawBorder%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20color%3A%20%5B%27pink%27%2C%20%27red%27%2C%20%27orange%27%2C%20%27yellow%27%2C%20%27green%27%2C%20%27blue%27%2C%20%27indigo%27%2C%20%27purple%27%5D%0A%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20min%3A%200%2C%0A%20%20%20%20%20%20%20%20max%3A%20100%2C%0A%20%20%20%20%20%20%20%20ticks%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20stepSize%3A%2010%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)
+
+*调用Chart.js v3*
+```
+/chartv3 <code>
+```
+例子：
+```
+/chartv3 {
+  type: 'line',
+  data: {
+    labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+    datasets: [{
+      label: 'Data',
+      data: [6.06, 82.2, -22.11, 21.53],
+      lineTension: 0.4,
+      borderColor: '#ff3333',
+      backgroundColor: '#ffcccc',
+      fill: {
+        target: {
+          value: 30,
+        },
+        above: 'transparent',
+        below: '#ffcccc',
+      }
+    }]
+  }
+}
+```
+![v3-sample](https://quickchart.io/chart?v=3&c=%7B%0A%20%20type%3A%20%27line%27%2C%0A%20%20data%3A%20%7B%0A%20%20%20%20labels%3A%20%5B%27Q1%27%2C%20%27Q2%27%2C%20%27Q3%27%2C%20%27Q4%27%5D%2C%0A%20%20%20%20datasets%3A%20%5B%7B%0A%20%20%20%20%20%20label%3A%20%27Data%27%2C%0A%20%20%20%20%20%20data%3A%20%5B6.06%2C%2082.2%2C%20-22.11%2C%2021.53%5D%2C%0A%20%20%20%20%20%20lineTension%3A%200.4%2C%0A%20%20%20%20%20%20borderColor%3A%20%27%23ff3333%27%2C%0A%20%20%20%20%20%20backgroundColor%3A%20%27%23ffcccc%27%2C%0A%20%20%20%20%20%20fill%3A%20%7B%20%0A%20%0A%20%20%20%20%20%20%20%20target%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20value%3A%2030%2C%0A%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20above%3A%20%27transparent%27%2C%0A%20%20%20%20%20%20%20%20below%3A%20%27%23ffcccc%27%2C%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%5D%0A%20%20%7D%0A%7D%0A)
 
 # Perchance外部API 『/perc』
 这是一次通过glitch实现JS交互的尝试。服务器上装不上JS所以只能这么做试试。当然功能本身和这些没有半点关系。Perchance是一个文本生成器网站，但没有提供api，作者通过glitch搭建了一个供调用。
